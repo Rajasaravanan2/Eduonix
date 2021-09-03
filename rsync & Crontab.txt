@@ -1,0 +1,12 @@
+rsync file:
+
+rsync -avzh /root /backups/
+
+zip /backup/archive.zip /backups/ && rsync -av --delete /backup/ /backups/
+
+
+crontab:
+
+root killall rsync
+
+0 23 * * * root zip /backup/archive.zip /backups/ && rsync -av --delete /backup/ /backups/
