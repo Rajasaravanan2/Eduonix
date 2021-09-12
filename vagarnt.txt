@@ -1,0 +1,16 @@
+
+#Congig FIle-Share File
+config.vm.synced_folder "host/folder/Donotshare", "box/folder/Donotshare"
+
+
+#SQL LIte config
+my-vagrant-config:
+  minion:
+    master: 1192.168.0.10
+  provider: vagrant
+
+vagrant_sdb_data:  newdatabage
+  driver: sqlite3  
+  database: /var/cache/salt/vagrant.sqlite  
+  table: Table1  
+  create_table: True 
